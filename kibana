@@ -1,0 +1,10 @@
+# Kibana server (static content root)
+server {
+  location / {
+    root /home/vagrant/kibana-3.1.0;
+  }
+  listen 9080 default_server;
+  listen [::]:9080 default_server ipv6only=on;
+  index index.html index.htm;
+  server_name localhost;
+}
