@@ -50,7 +50,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         kibana_config.vm.provision "shell", path: "provision_kibana.sh"
 
 	# Upload files
-        kibana_config.vm.provision "file", source: "kibana", destination: "kibana" 
+        kibana_config.vm.provision "file", source: "kibana.nginx.conf", destination: "kibana" 
 
         kibana_config.vm.provision "shell", inline: $nginx_copy
         kibana_config.vm.provision "shell", inline: "nginx"
