@@ -8,5 +8,5 @@ if [ ! -f "elasticsearch-1.3.2.tar.gz" ]; then
   tar -xvf elasticsearch-1.3.2.tar
 fi
 
-sudo ./elasticsearch-1.3.2/bin/elasticsearch &
+sudo nohup ./elasticsearch-1.3.2/bin/elasticsearch &
 
